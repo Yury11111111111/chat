@@ -1,0 +1,27 @@
+.chat-container {
+  height: 91.5vh;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.chat-main {
+  width: 80%;
+  height: 70vh;
+  border: 1px solid blue;
+  overflow-y: auto;
+}
+
+.message__user {
+  border: 2px solid green;
+  border-radius: 5px;
+  margin: 10px;
+  margin-left: auto;
+  width: fit-content;
+}
+.message__other {
+  border: 2px solid rgb(23, 0, 173);
+  border-radius: 5px;
+  margin: 10px;
+  width: fit-content;
+}

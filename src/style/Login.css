@@ -1,0 +1,9 @@
+.login {
+    height: 91.5vh;
+    justify-content: center;
+}
+
+.login__box {
+    width: 400px;
+    background-color: lightblue;
+}
