@@ -1,9 +1,22 @@
 .login {
-    height: 91.5vh;
-    justify-content: center;
+  height: 91.5vh;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login__text {
+  width: 300px;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .login__box {
-    width: 400px;
-    background-color: lightblue;
+  width: 400px;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+.login__button {
+  width: 250px;
 }

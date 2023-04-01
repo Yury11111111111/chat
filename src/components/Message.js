@@ -17,20 +17,40 @@ const Message = (props) => {
       }
     >
       <Grid container>
-        <Avatar
-          src={
-            props.message._document.data.value.mapValue.fields.photoURL
-              .stringValue
-          }
-        />
-        <div>
-          {
-            props.message._document.data.value.mapValue.fields.displayName
-              .stringValue
-          }
-        </div>
+        {props.message._document.data.value.mapValue.fields.uid.stringValue ===
+        user?.uid ? (
+          <>
+            <div className="message__name">
+              {
+                props.message._document.data.value.mapValue.fields.displayName
+                  .stringValue
+              }
+            </div>
+            <Avatar
+              src={
+                props.message._document.data.value.mapValue.fields.photoURL
+                  .stringValue
+              }
+            />
+          </>
+        ) : (
+          <>
+            <Avatar
+              src={
+                props.message._document.data.value.mapValue.fields.photoURL
+                  .stringValue
+              }
+            />
+            <div className="message__name">
+              {
+                props.message._document.data.value.mapValue.fields.displayName
+                  .stringValue
+              }
+            </div>
+          </>
+        )}
       </Grid>
-      <div>
+      <div className="message__text">
         {props.message._document.data.value.mapValue.fields.text.stringValue}
       </div>
     </div>

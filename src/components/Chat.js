@@ -12,6 +12,7 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import Message from "./Message";
+import Loader from "./Loader";
 
 const Chat = () => {
   const { auth, database } = useContext(Context);
@@ -53,12 +54,7 @@ const Chat = () => {
             return <Message message={message} key={Math.random()} />;
           })}
         </div>
-        <Grid
-          container
-          direction="column"
-          alignItems="flex-end"
-          style={{ width: "80%" }}
-        >
+        <Grid container direction="column" alignItems="flex-end">
           <TextField
             fullWidth
             maxRows={2}
